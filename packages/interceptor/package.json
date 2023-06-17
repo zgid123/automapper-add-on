@@ -1,0 +1,45 @@
+{
+  "name": "@automapper-add-on/interceptor",
+  "version": "1.0.1",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "Alpha",
+  "description": "NestJS Interceptor for @automapper",
+  "homepage": "https://github.com/zgid123/automapper-add-on",
+  "keywords": [
+    "automapper",
+    "mapper",
+    "automapper-add-on",
+    "mapper-add-on",
+    "automapper-interceptor",
+    "mapper-interceptor",
+    "automapper-add-on-interceptor",
+    "mapper-add-on-interceptor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgid123/automapper-add-on"
+  },
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "prepublish": "pnpm build",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "dependencies": {
+    "@automapper/core": "^8.7.7",
+    "@automapper/nestjs": "^8.7.7",
+    "@nestjs/common": "^10.0.1",
+    "rxjs": "^7.8.1"
+  }
+}
