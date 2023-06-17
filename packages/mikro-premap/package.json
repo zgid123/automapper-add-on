@@ -1,0 +1,44 @@
+{
+  "name": "@automapper-add-on/mikro-premap",
+  "version": "1.0.0",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "Alpha",
+  "description": "Mikro preMap for @automapper",
+  "homepage": "https://github.com/zgid123/automapper-add-on",
+  "keywords": [
+    "automapper",
+    "mapper",
+    "automapper-add-on",
+    "mapper-add-on",
+    "automapper-mikro",
+    "mapper-mikro",
+    "automapper-add-on-mikro",
+    "mapper-add-on-mikro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zgid123/automapper-add-on"
+  },
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "prepublish": "pnpm build",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "dependencies": {
+    "@automapper/classes": "^8.7.7",
+    "@automapper/core": "^8.7.7",
+    "@mikro-orm/core": "^5.7.12"
+  }
+}
